@@ -35,7 +35,7 @@ import ch.qos.logback.core.encoder.LayoutWrappingEncoder
 import ch.qos.logback.classic.PatternLayout
 import ch.qos.logback.core.util.FileSize
 import ch.qos.logback.core.util.StatusPrinter
-import ch.qos.logback.classic.net.SMTPAppender
+
 import ch.qos.logback.core.rolling.RollingFileAppender
 import ch.qos.logback.core.rolling.TimeBasedRollingPolicy
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder

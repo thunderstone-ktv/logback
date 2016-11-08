@@ -27,7 +27,6 @@ import ch.qos.logback.classic.ClassicTestConstants;
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
-import ch.qos.logback.classic.boolex.JaninoEventEvaluator;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.core.CoreConstants;

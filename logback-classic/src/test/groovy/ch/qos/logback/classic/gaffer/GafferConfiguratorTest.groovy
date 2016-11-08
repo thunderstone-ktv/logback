@@ -31,7 +31,7 @@ import ch.qos.logback.core.testUtil.StringListAppender
 import ch.qos.logback.classic.testUtil.SampleConverter
 import ch.qos.logback.core.util.StatusPrinter
 
-import ch.qos.logback.classic.boolex.JaninoEventEvaluator
+
 import ch.qos.logback.core.filter.EvaluatorFilter
 import ch.qos.logback.core.boolex.Matcher
 import static org.junit.Assert.assertTrue

@@ -21,7 +21,6 @@ import org.junit.Test;
 import org.slf4j.LoggerFactory;
 
 import ch.qos.logback.classic.ClassicConstants;
-import ch.qos.logback.classic.selector.servlet.ContextDetachingSCL;
 import ch.qos.logback.classic.util.ContextSelectorStaticBinder;
 import ch.qos.logback.classic.util.MockInitialContext;
 import ch.qos.logback.classic.util.MockInitialContextFactory;
