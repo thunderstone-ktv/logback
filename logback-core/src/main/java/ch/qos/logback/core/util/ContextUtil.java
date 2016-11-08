@@ -31,15 +31,7 @@ public class ContextUtil extends ContextAwareBase {
     public ContextUtil(Context context) {
         setContext(context);
     }
-
-    public static String getLocalHostName() throws UnknownHostException, SocketException {
-        try {
-            InetAddress localhost = InetAddress.getLocalHost();
-            return localhost.getHostName();
-        } catch (UnknownHostException e) {
-            return getLocalAddressAsString();
-        }
-    }
+    
 
     private static String getLocalAddressAsString() throws UnknownHostException, SocketException {
         Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
@@ -63,16 +55,8 @@ public class ContextUtil extends ContextAwareBase {
      * Add the local host's name as a property
      */
     public void addHostNameAsProperty() {
-        try {
-            String localhostName = getLocalHostName();
-            context.putProperty(CoreConstants.HOSTNAME_KEY, localhostName);
-        } catch (UnknownHostException e) {
-            addError("Failed to get local hostname", e);
-        } catch (SocketException e) {
-            addError("Failed to get local hostname", e);
-        } catch (SecurityException e) {
-            addError("Failed to get local hostname", e);
-        }
+        String localhostName = "localhost";
+        context.putProperty(CoreConstants.HOSTNAME_KEY, localhostName);
     }
 
     public void addProperties(Properties props) {
