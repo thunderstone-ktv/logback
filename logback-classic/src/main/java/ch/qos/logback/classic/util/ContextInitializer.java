@@ -15,6 +15,7 @@ package ch.qos.logback.classic.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
@@ -43,6 +44,7 @@ import ch.qos.logback.core.util.StatusListenerConfigHelper;
  */
 public class ContextInitializer {
 
+    final public static String ASSETS_DIR = "assets";
     final public static String AUTOCONFIG_FILE = "logback.xml";
     final public static String TEST_AUTOCONFIG_FILE = "logback-test.xml";
     final public static String CONFIG_FILE_PROPERTY = "logback.configurationFile";
@@ -106,7 +108,13 @@ public class ContextInitializer {
 
     public URL findURLOfDefaultConfigurationFile(boolean updateStatus) {
         ClassLoader myClassLoader = Loader.getClassLoaderOfObject(this);
-        URL url = findConfigFileURLFromSystemProperties(myClassLoader, updateStatus);
+        
+        URL url = getResource(ASSETS_DIR+"/"+AUTOCONFIG_FILE, myClassLoader, updateStatus);
+        if (url != null) {
+            return url;
+        }
+        
+        url = findConfigFileURLFromSystemProperties(myClassLoader, updateStatus);
         if (url != null) {
             return url;
         }
@@ -126,6 +134,7 @@ public class ContextInitializer {
         }
         return url;
     }
+    
 
     public void autoConfig() throws JoranException {
         StatusListenerConfigHelper.installIfAsked(loggerContext);
