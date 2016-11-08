@@ -17,7 +17,6 @@
 // please see http://logback.qos.ch/manual/groovy.html
 //
 
-import ch.qos.logback.classic.boolex.JaninoEventEvaluator
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder
 import ch.qos.logback.core.ConsoleAppender
 import ch.qos.logback.core.filter.EvaluatorFilter

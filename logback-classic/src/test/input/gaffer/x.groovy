@@ -13,7 +13,7 @@
  */
 import ch.qos.logback.classic.PatternLayout
 import ch.qos.logback.classic.filter.ThresholdFilter
-import ch.qos.logback.classic.net.SMTPAppender
+
 import ch.qos.logback.core.ConsoleAppender
 import ch.qos.logback.core.rolling.FixedWindowRollingPolicy
 import ch.qos.logback.core.rolling.RollingFileAppender

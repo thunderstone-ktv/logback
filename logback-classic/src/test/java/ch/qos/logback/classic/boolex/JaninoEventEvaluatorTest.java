@@ -31,7 +31,6 @@ import ch.qos.logback.classic.pattern.ConverterTest;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.core.boolex.EvaluationException;
-import ch.qos.logback.core.boolex.JaninoEventEvaluatorBase;
 import ch.qos.logback.core.boolex.Matcher;
 import ch.qos.logback.core.filter.EvaluatorFilter;
 import ch.qos.logback.core.spi.FilterReply;
